@@ -1,0 +1,44 @@
+<?php
+
+$this->pageTitle=Yii::app()->name . ' - Справочник';
+$this->breadcrumbs=array(
+	'Справочник',
+);
+?>
+
+<h1>Справочник</h1>
+
+<?php 
+	//echo "<pre>";
+	//print_r($dataProvider);
+	//echo "</pre>";
+	$this->widget('zii.widgets.grid.CGridView', array(
+	'id'=>'user-grid',
+	'dataProvider'=>$dataProvider,
+	'columns'=>array(
+		'last_name',		
+		'name',
+		'middle_name',
+		array(
+			'name' => 'Отдел',
+			'value' => 'department.department',
+		),
+		'email',
+		'tel_int',
+		'id_tel_mobile',
+		'post',
+		
+		//array(
+		//	'name' => 'Отдел',
+		//	'filter' => CHtml::listData(Department::model()->findAll(), 'id', 'department'),
+		//	'value' => '$data->department->department',
+		//	),
+		//'department',
+		/*'department_id',
+		'birthday',
+		'last_visit',
+		'role',
+		*/
+	),
+)); 
+?>

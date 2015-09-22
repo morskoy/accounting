@@ -1,0 +1,40 @@
+<?php
+/* @var $this UserController */
+/* @var $dataProvider CActiveDataProvider */
+
+$this->breadcrumbs=array(
+	'Пользователи',
+);
+
+$this->menu=array(
+	array('label'=>'Создать', 'url'=>array('create')),
+	array('label'=>'Manage User', 'url'=>array('admin')),
+);
+?>
+
+<h1>Пользователи</h1>
+<!--
+<?php $this->widget('zii.widgets.CListView', array(
+	'dataProvider'=>$dataProvider,
+	'itemView'=>'_view',
+)); ?>
+-->
+<?php $this->widget('zii.widgets.grid.CGridView', array(
+	'id'=>'user-grid',
+	'dataProvider'=>$dataProvider,
+	'columns'=>array(
+		'name',
+		'last_name',
+		'middle_name',
+		'email',
+		'tel_int',
+		'id_tel_mobile',
+		'post',
+			/*'department_id',
+		'birthday',
+		'last_visit',
+		'role',
+		*/
+	),
+)); 
+?>

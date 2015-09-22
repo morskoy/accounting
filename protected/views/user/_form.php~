@@ -1,0 +1,102 @@
+<?php
+/* @var $this UserController */
+/* @var $model User */
+/* @var $form CActiveForm */
+?>
+
+<div class="form">
+
+<?php $form=$this->beginWidget('CActiveForm', array(
+	'id'=>'user-form',
+	'enableAjaxValidation'=>false,
+)); ?>
+
+	<p class="note">Fields with <span class="required">*</span> are required.</p>
+
+	<?php echo $form->errorSummary($model); ?>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'login'); ?>
+		<?php echo $form->textField($model,'login',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo $form->error($model,'login'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'password'); ?>
+		<?php echo $form->textArea($model,'password',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($model,'password'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'name'); ?>
+		<?php echo $form->textField($model,'name',array('size'=>30,'maxlength'=>30)); ?>
+		<?php echo $form->error($model,'name'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'last_name'); ?>
+		<?php echo $form->textField($model,'last_name',array('size'=>30,'maxlength'=>30)); ?>
+		<?php echo $form->error($model,'last_name'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'middle_name'); ?>
+		<?php echo $form->textField($model,'middle_name',array('size'=>30,'maxlength'=>30)); ?>
+		<?php echo $form->error($model,'middle_name'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'email'); ?>
+		<?php echo $form->textField($model,'email',array('size'=>30,'maxlength'=>30)); ?>
+		<?php echo $form->error($model,'email'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'tel_int'); ?>
+		<?php echo $form->textField($model,'tel_int'); ?>
+		<?php echo $form->error($model,'tel_int'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'id_tel_mobile'); ?>
+		<?php echo $form->textField($model,'id_tel_mobile'); ?>
+		<?php echo $form->error($model,'id_tel_mobile'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'post'); ?>
+		<?php echo $form->textField($model,'post',array('size'=>40,'maxlength'=>40)); ?>
+		<?php echo $form->error($model,'post'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'department_id'); ?>
+		<?php echo $form->textField($model,'department_id'); ?>
+		<?php echo $form->error($model,'department_id'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'birthday'); ?>
+		<?php echo $form->textField($model,'birthday'); ?>
+		<?php echo $form->error($model,'birthday'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'last_visit'); ?>
+		<?php echo $form->textField($model,'last_visit'); ?>
+		<?php echo $form->error($model,'last_visit'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'role'); ?>
+		<?php echo $form->textField($model,'role'); ?>
+		<?php echo $form->error($model,'role'); ?>
+	</div>
+
+	<div class="row buttons">
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+	</div>
+
+<?php $this->endWidget(); ?>
+
+</div><!-- form -->
